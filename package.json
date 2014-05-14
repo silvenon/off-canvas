@@ -1,0 +1,42 @@
+{
+  "name": "off-canvas",
+  "version": "0.0.0",
+  "description": "Provides an off-canvas menu",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unity-hr/off-canvas"
+  },
+  "keywords": [
+    "off",
+    "canvas",
+    "menu",
+    "flyout",
+    "push",
+    "navigation",
+    "nav",
+    "sidebar"
+  ],
+  "author": "Matija Marohnić <matija.marohnic@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unity-hr/off-canvas/issues"
+  },
+  "homepage": "https://github.com/unity-hr/off-canvas",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-clean": "^0.2.4",
+    "gulp-coffee": "^1.4.3",
+    "gulp-concat": "^2.2.0",
+    "gulp-csso": "^0.2.8",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.5.0",
+    "gulp-size": "^0.3.1",
+    "gulp-uglify": "^0.3.0"
+  }
+}

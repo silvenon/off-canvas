@@ -1,0 +1,34 @@
+{
+  "name": "off-canvas",
+  "version": "0.0.0",
+  "authors": [
+    "Matija Marohnić <matija.marohnic@gmail.com>"
+  ],
+  "description": "Provides an off-canvas menu",
+  "main": [
+    "dist/off-canvas.css",
+    "dist/off-canvas.js"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "off",
+    "canvas",
+    "menu",
+    "flyout",
+    "push",
+    "navigation",
+    "nav",
+    "sidebar"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/unity-hr/off-canvas",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
