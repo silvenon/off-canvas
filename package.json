@@ -1,6 +1,5 @@
 {
   "name": "off-canvas",
-  "version": "0.0.0",
   "description": "Provides an off-canvas menu",
   "main": "gulpfile.js",
   "scripts": {
