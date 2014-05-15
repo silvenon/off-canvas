@@ -17,7 +17,6 @@
     OffCanvas.prototype.setupElements = function() {
       this.container = $("." + this.namespace);
       this.toggleBtn = $("." + this.namespace + "-toggle");
-      console.log(this.toggleBtn);
       return this.overlay = $('<div>', {
         "class": "" + this.namespace + "-overlay"
       });

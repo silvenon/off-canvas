@@ -15,7 +15,6 @@ class @OffCanvas
   setupElements: ->
     @container = $(".#{@namespace}")
     @toggleBtn = $(".#{@namespace}-toggle")
-    console.log @toggleBtn
     @overlay = $('<div>', class: "#{@namespace}-overlay")
 
 
