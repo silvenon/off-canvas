@@ -1,0 +1,23 @@
+&-menu {
+  @include off-canvas-init;
+  position: absolute;
+  width: $off-canvas-width;
+  height: $off-canvas-height;
+
+  @if $off-canvas-height != auto {
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(#{-$off-canvas-height});
+  }
+
+  @media (min-width: $off-canvas-breakpoint) {
+    display: none;
+  }
+}
+
+&.is-active &-menu {
+  @if $off-canvas-height != auto {
+    transform: translateY(0px);
+  }
+}

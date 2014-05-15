@@ -1,0 +1,9 @@
+&-content {
+  @include off-canvas-init;
+  position: relative;
+  transform: translateY(0px);
+}
+
+&.is-active &-content {
+  transform: translateY(#{$off-canvas-height});
+}

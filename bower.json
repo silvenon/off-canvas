@@ -6,7 +6,7 @@
   ],
   "description": "Provides an off-canvas menu",
   "main": [
-    "dist/off-canvas.css",
+    "src/styles/off-canvas.scss",
     "dist/off-canvas.js"
   ],
   "moduleType": [

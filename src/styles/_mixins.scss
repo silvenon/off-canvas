@@ -1,0 +1,4 @@
+@mixin off-canvas-init {
+  backface-visibility: hidden;
+  transition: $off-canvas-transition-duration transform;
+}

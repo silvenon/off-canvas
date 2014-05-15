@@ -1,0 +1,7 @@
+&-hide {
+  display: none;
+
+  @media (min-width: $off-canvas-breakpoint) {
+    display: block;
+  }
+}

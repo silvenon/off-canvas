@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+.#{$off-canvas-namespace} {
+  @import "content";
+  @import "menu";
+  @import "overlay";
+  @import "toggle";
+  @import "visibility";
+}
