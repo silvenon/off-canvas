@@ -19,7 +19,7 @@ class @OffCanvas
 
 
   toggling: ->
-    @toggleBtn.on 'click touchstart', (event) =>
+    @toggleBtn.on 'click', (event) =>
       event.preventDefault()
       @container.toggleClass('is-active')
       @overlay.toggle()

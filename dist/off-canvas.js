@@ -23,7 +23,7 @@
     };
 
     OffCanvas.prototype.toggling = function() {
-      return this.toggleBtn.on('click touchstart', (function(_this) {
+      return this.toggleBtn.on('click', (function(_this) {
         return function(event) {
           event.preventDefault();
           _this.container.toggleClass('is-active');
