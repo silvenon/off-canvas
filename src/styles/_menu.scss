@@ -10,14 +10,14 @@
     right: 0;
     transform: translateY(#{-$off-canvas-height});
   }
-
-  @media (min-width: $off-canvas-breakpoint) {
-    display: none;
-  }
 }
 
 &.is-active &-menu {
   @if $off-canvas-height != auto {
     transform: translateY(0px);
+
+    @media (min-width: $off-canvas-breakpoint) {
+      transform: translateY(#{-$off-canvas-height});
+    }
   }
 }

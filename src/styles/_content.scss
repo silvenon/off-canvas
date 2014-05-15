@@ -6,4 +6,8 @@
 
 &.is-active &-content {
   transform: translateY(#{$off-canvas-height});
+
+  @media (min-width: $off-canvas-breakpoint) {
+    transform: translateY(0px);
+  }
 }
