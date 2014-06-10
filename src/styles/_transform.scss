@@ -1,0 +1,22 @@
+$off-canvas-menu-transform:    translate3d(0,0,0);
+$off-canvas-content-transform: translate3d(0,0,0);
+
+@if $off-canvas-position == top {
+  $off-canvas-menu-transform:    translate3d(0, -#{$off-canvas-height}, 0);
+  $off-canvas-content-transform: translate3d(0,  #{$off-canvas-height}, 0);
+}
+@else if $off-canvas-position == right {
+  $off-canvas-menu-transform:    translate3d( #{$off-canvas-width}, 0, 0);
+  $off-canvas-content-transform: translate3d(-#{$off-canvas-width}, 0, 0);
+}
+@else if $off-canvas-position == bottom {
+  $off-canvas-menu-transform:    translate3d(0, #{$off-canvas-height}, 0);
+  $off-canvas-content-transform: translate3d(0, -#{$off-canvas-height}, 0);
+}
+@else if $off-canvas-position == left {
+  $off-canvas-menu-transform:    translate3d(-#{$off-canvas-width}, 0, 0);
+  $off-canvas-content-transform: translate3d( #{$off-canvas-width}, 0, 0);
+}
+@else {
+  @warn "#{$off-canvas-position} is not a valid position!";
+}

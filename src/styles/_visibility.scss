@@ -1,7 +1,15 @@
-&-hide {
+&-visible {
+  display: block;
+
+  @include off-canvas-breakpoint {
+    display: none;
+  }
+}
+
+&-hidden {
   display: none;
 
-  @media (min-width: $off-canvas-breakpoint) {
+  @include off-canvas-breakpoint {
     display: block;
   }
 }

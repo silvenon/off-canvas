@@ -1,7 +1,7 @@
 &-toggle {
   display: inline-block;
 
-  @media (min-width: $off-canvas-breakpoint) {
+  @include off-canvas-breakpoint {
     display: none;
   }
 }

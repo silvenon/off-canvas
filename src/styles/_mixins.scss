@@ -2,3 +2,9 @@
   backface-visibility: hidden;
   transition: $off-canvas-transition-duration transform;
 }
+
+@mixin off-canvas-breakpoint {
+  @if $off-canvas-breakpoint {
+    @media (min-width: $off-canvas-breakpoint) { @content; }
+  }
+}

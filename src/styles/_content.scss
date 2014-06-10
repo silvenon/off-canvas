@@ -1,13 +1,13 @@
 &-content {
   @include off-canvas-init;
   position: relative;
-  transform: translateY(0px);
+  transform: translate3d(0,0,0);
 }
 
 &.is-active &-content {
-  transform: translateY(#{$off-canvas-height});
+  transform: $off-canvas-content-transform;
 
-  @media (min-width: $off-canvas-breakpoint) {
-    transform: translateY(0px);
+  @include off-canvas-breakpoint {
+    transform: translate3d(0,0,0);
   }
 }

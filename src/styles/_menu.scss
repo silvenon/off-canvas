@@ -1,23 +1,22 @@
 &-menu {
   @include off-canvas-init;
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: $off-canvas-width;
   height: $off-canvas-height;
 
-  @if $off-canvas-height != auto {
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(#{-$off-canvas-height});
-  }
+  #{opposite($off-canvas-position)}: auto;
+
+  transform: $off-canvas-menu-transform;
 }
 
 &.is-active &-menu {
-  @if $off-canvas-height != auto {
-    transform: translateY(0px);
+  transform: translate3d(0,0,0);
 
-    @media (min-width: $off-canvas-breakpoint) {
-      transform: translateY(#{-$off-canvas-height});
-    }
+  @include off-canvas-breakpoint {
+    transform: $off-canvas-menu-transform;
   }
 }
