@@ -22,10 +22,10 @@ class @OffCanvas
     @toggleBtn.on 'click', (event) =>
       event.preventDefault()
       @container.toggleClass('is-active')
-      @overlay.toggle()
+      @overlay.appendTo(@container)
 
 
   escaping: ->
-    @overlay.on 'click touchstart', =>
+    $(document).on 'click touchstart', ".#{@namespace}-overlay", =>
       @container.removeClass('is-active')
-      @overlay.hide()
+      @overlay.remove()

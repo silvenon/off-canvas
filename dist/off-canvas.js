@@ -27,16 +27,16 @@
         return function(event) {
           event.preventDefault();
           _this.container.toggleClass('is-active');
-          return _this.overlay.toggle();
+          return _this.overlay.appendTo(_this.container);
         };
       })(this));
     };
 
     OffCanvas.prototype.escaping = function() {
-      return this.overlay.on('click touchstart', (function(_this) {
+      return $(document).on('click touchstart', "." + this.namespace + "-overlay", (function(_this) {
         return function() {
           _this.container.removeClass('is-active');
-          return _this.overlay.hide();
+          return _this.overlay.remove();
         };
       })(this));
     };
