@@ -2,6 +2,9 @@ class @OffCanvas
 
   @DEFAULTS:
     namespace: 'off-canvas'
+    overlayContainer: 'content'
+    onOpen: ->
+    onClose: ->
 
 
   constructor: (options = {}) ->
@@ -14,21 +17,26 @@ class @OffCanvas
 
   setupElements: ->
     @container = $(".#{@namespace}")
-    @content   = $(".#{@namespace}-content")
-    @toggleBtn = $(".#{@namespace}-toggle")
+    @content   = $(".#{@namespace}-#{@overlayContainer}")
     @overlay = $('<div>', class: "#{@namespace}-overlay")
 
 
   toggling: ->
-    @toggleBtn.on 'click', (event) =>
+    $(document).on 'click', ".#{@namespace}-toggle", (event) =>
       event.preventDefault()
       @container.toggleClass('is-active')
       @overlay
         .appendTo(@content)
         .hide().fadeIn('fast')
+      @onOpen()
 
 
   escaping: ->
     $(document).on 'click touchstart', ".#{@namespace}-overlay", =>
-      @container.removeClass('is-active')
-      @overlay.fadeOut 'fast', => @overlay.remove()
+      @close()
+
+
+  close: ->
+    @container.removeClass('is-active')
+    @overlay.fadeOut 'fast', => @overlay.remove()
+    @onClose()

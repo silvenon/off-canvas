@@ -1,7 +1,10 @@
 (function() {
   this.OffCanvas = (function() {
     OffCanvas.DEFAULTS = {
-      namespace: 'off-canvas'
+      namespace: 'off-canvas',
+      overlayContainer: 'content',
+      onOpen: function() {},
+      onClose: function() {}
     };
 
     function OffCanvas(options) {
@@ -16,19 +19,19 @@
 
     OffCanvas.prototype.setupElements = function() {
       this.container = $("." + this.namespace);
-      this.content = $("." + this.namespace + "-content");
-      this.toggleBtn = $("." + this.namespace + "-toggle");
+      this.content = $("." + this.namespace + "-" + this.overlayContainer);
       return this.overlay = $('<div>', {
         "class": "" + this.namespace + "-overlay"
       });
     };
 
     OffCanvas.prototype.toggling = function() {
-      return this.toggleBtn.on('click', (function(_this) {
+      return $(document).on('click', "." + this.namespace + "-toggle", (function(_this) {
         return function(event) {
           event.preventDefault();
           _this.container.toggleClass('is-active');
-          return _this.overlay.appendTo(_this.content).hide().fadeIn('fast');
+          _this.overlay.appendTo(_this.content).hide().fadeIn('fast');
+          return _this.onOpen();
         };
       })(this));
     };
@@ -36,12 +39,19 @@
     OffCanvas.prototype.escaping = function() {
       return $(document).on('click touchstart', "." + this.namespace + "-overlay", (function(_this) {
         return function() {
-          _this.container.removeClass('is-active');
-          return _this.overlay.fadeOut('fast', function() {
-            return _this.overlay.remove();
-          });
+          return _this.close();
         };
       })(this));
+    };
+
+    OffCanvas.prototype.close = function() {
+      this.container.removeClass('is-active');
+      this.overlay.fadeOut('fast', (function(_this) {
+        return function() {
+          return _this.overlay.remove();
+        };
+      })(this));
+      return this.onClose();
     };
 
     return OffCanvas;
