@@ -14,6 +14,7 @@ class @OffCanvas
 
   setupElements: ->
     @container = $(".#{@namespace}")
+    @content   = $(".#{@namespace}-content")
     @toggleBtn = $(".#{@namespace}-toggle")
     @overlay = $('<div>', class: "#{@namespace}-overlay")
 
@@ -22,7 +23,7 @@ class @OffCanvas
     @toggleBtn.on 'click', (event) =>
       event.preventDefault()
       @container.toggleClass('is-active')
-      @overlay.appendTo(@container)
+      @overlay.appendTo(@content)
 
 
   escaping: ->
