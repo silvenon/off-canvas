@@ -28,7 +28,7 @@
         return function(event) {
           event.preventDefault();
           _this.container.toggleClass('is-active');
-          return _this.overlay.appendTo(_this.content);
+          return _this.overlay.appendTo(_this.content).hide().fadeIn('fast');
         };
       })(this));
     };
@@ -37,7 +37,9 @@
       return $(document).on('click touchstart', "." + this.namespace + "-overlay", (function(_this) {
         return function() {
           _this.container.removeClass('is-active');
-          return _this.overlay.remove();
+          return _this.overlay.fadeOut('fast', function() {
+            return _this.overlay.remove();
+          });
         };
       })(this));
     };
