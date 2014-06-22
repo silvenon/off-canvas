@@ -2,8 +2,8 @@
 
 ## Work in progress!
 
-This will be a Sassy jQuery plugin for off-canvas content. It won't work without
-Sass, that's the only sane way to do it.
+This is a Sassy jQuery plugin for off-canvas content. It won't work without
+Sass, that's the only sane way for me to do it.
 
 ## Example
 
@@ -23,6 +23,10 @@ Sass, that's the only sane way to do it.
 
   <div class="off-canvas-content">
     <!-- pushed away when the menu opens -->
+
+    <div class="off-canvas-overlay-container">
+      <!-- where the overlay will be appended -->
+    </div>
   </div>
 </body>
 ```
