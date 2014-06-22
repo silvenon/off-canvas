@@ -24,16 +24,27 @@ class @OffCanvas
   toggling: ->
     $(document).on 'click', ".#{@namespace}-toggle", (event) =>
       event.preventDefault()
-      @container.toggleClass('is-active')
       @overlay
         .appendTo(@content)
-        .hide().fadeIn('fast')
-      @onOpen()
+        .show()
+
+      # unless the breakpoint is crossed
+      # TODO make this state more stable and general
+      unless @overlay.is(':hidden')
+        @open(event)
+      else
+        @overlay.remove()
 
 
   escaping: ->
     $(document).on 'click touchstart', ".#{@namespace}-overlay", =>
       @close()
+
+
+  open: (event) ->
+    @container.addClass('is-active')
+    @overlay.hide().fadeIn('fast')
+    @onOpen(event)
 
 
   close: ->

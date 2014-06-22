@@ -29,9 +29,12 @@
       return $(document).on('click', "." + this.namespace + "-toggle", (function(_this) {
         return function(event) {
           event.preventDefault();
-          _this.container.toggleClass('is-active');
-          _this.overlay.appendTo(_this.content).hide().fadeIn('fast');
-          return _this.onOpen();
+          _this.overlay.appendTo(_this.content).show();
+          if (!_this.overlay.is(':hidden')) {
+            return _this.open(event);
+          } else {
+            return _this.overlay.remove();
+          }
         };
       })(this));
     };
@@ -42,6 +45,12 @@
           return _this.close();
         };
       })(this));
+    };
+
+    OffCanvas.prototype.open = function(event) {
+      this.container.addClass('is-active');
+      this.overlay.hide().fadeIn('fast');
+      return this.onOpen(event);
     };
 
     OffCanvas.prototype.close = function() {

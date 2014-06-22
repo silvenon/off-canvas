@@ -5,6 +5,17 @@
 
 @mixin off-canvas-breakpoint {
   @if $off-canvas-breakpoint {
-    @media (min-width: $off-canvas-breakpoint) { @content; }
+    $direction: nth($off-canvas-breakpoint, 1);
+    $breakpoint: nth($off-canvas-breakpoint, 2);
+
+    @if $direction == to {
+      @media (min-width: ($breakpoint + 1px)) { @content; }
+    }
+    @else if $direction == from {
+      @media (max-width: ($breakpoint - 1px)) { @content; }
+    }
+    @else {
+      @warn "#{$direction} is not a valid breakpoint direction!";
+    }
   }
 }
