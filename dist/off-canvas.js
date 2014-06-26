@@ -29,7 +29,7 @@
       return $(document).on('click', "." + this.namespace + "-toggle", (function(_this) {
         return function(event) {
           event.preventDefault();
-          _this.overlay.appendTo(_this.content).show();
+          _this.overlay.appendTo(_this.content).removeAttr('style');
           if (!_this.overlay.is(':hidden')) {
             return _this.open(event);
           } else {

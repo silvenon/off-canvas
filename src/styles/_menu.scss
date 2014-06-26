@@ -11,12 +11,12 @@
   #{opposite($off-canvas-position)}: auto;
 
   transform: $off-canvas-menu-transform;
+
+  @include off-canvas-breakpoint {
+    display: none;
+  }
 }
 
 &.is-active &-menu {
   transform: translate3d(0,0,0);
-
-  @include off-canvas-breakpoint {
-    transform: $off-canvas-menu-transform;
-  }
 }

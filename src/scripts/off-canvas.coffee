@@ -26,7 +26,7 @@ class @OffCanvas
       event.preventDefault()
       @overlay
         .appendTo(@content)
-        .show()
+        .removeAttr('style')
 
       # unless the breakpoint is crossed
       # TODO make this state more stable and general
