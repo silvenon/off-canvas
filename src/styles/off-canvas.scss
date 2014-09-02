@@ -6,6 +6,7 @@
 
 .#{$off-canvas-namespace} {
   @import "content";
+  @import "fixed";
   @import "menu";
   @import "overlay";
   @import "toggle";
