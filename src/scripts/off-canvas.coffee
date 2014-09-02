@@ -24,16 +24,20 @@ class @OffCanvas
   toggling: ->
     $(document).on 'click', ".#{@namespace}-toggle", (event) =>
       event.preventDefault()
-      @overlay
-        .appendTo(@content)
-        .removeAttr('style')
 
-      # unless the breakpoint is crossed
-      # TODO make this state more stable and general
-      unless @overlay.is(':hidden')
-        @open(event)
+      unless @container.hasClass('is-active')
+        @overlay
+          .appendTo(@content)
+          .removeAttr('style')
+
+        # unless the breakpoint is crossed
+        # TODO make this state more stable and general
+        unless @overlay.is(':hidden')
+          @open(event)
+        else
+          @overlay.remove()
       else
-        @overlay.remove()
+        @close()
 
 
   escaping: ->

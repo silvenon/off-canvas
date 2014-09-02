@@ -29,11 +29,15 @@
       return $(document).on('click', "." + this.namespace + "-toggle", (function(_this) {
         return function(event) {
           event.preventDefault();
-          _this.overlay.appendTo(_this.content).removeAttr('style');
-          if (!_this.overlay.is(':hidden')) {
-            return _this.open(event);
+          if (!_this.container.hasClass('is-active')) {
+            _this.overlay.appendTo(_this.content).removeAttr('style');
+            if (!_this.overlay.is(':hidden')) {
+              return _this.open(event);
+            } else {
+              return _this.overlay.remove();
+            }
           } else {
-            return _this.overlay.remove();
+            return _this.close();
           }
         };
       })(this));
