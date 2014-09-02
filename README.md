@@ -9,6 +9,10 @@ Sass, that's the only sane way for me to do it.
 
 ```html
 <body class="off-canvas">
+  <a class="off-canvas-toggle" href="#">
+    <!-- toggles the off-canvas menu -->
+  </a>
+  
   <ul class="off-canvas-menu">
     <!-- mobile navigation or what have you -->
   </ul>
