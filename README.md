@@ -1,9 +1,16 @@
-# Off-canvas menu
+# Off-Canvas
 
 ## Work in progress!
 
-This is a Sassy jQuery plugin for off-canvas content. It won't work without
-Sass, that's the only sane way for me to do it.
+This is a Sassy JavaScript library for off-canvas content. Install it with
+Bower:
+
+```sh
+$ bower install --save off-canvas
+```
+
+It depends on [Eventie][eventie] and [Classie][classie], so if you're not
+installing Off-Canvas via Bower, download those as well.
 
 ## Example
 
@@ -11,6 +18,8 @@ Sass, that's the only sane way for me to do it.
 <body class="off-canvas">
   <a class="off-canvas-toggle" href="#">
     <!-- toggles the off-canvas menu -->
+    <!-- you can have multiple of these -->
+    <!-- for example a close button in the off-canvas menu -->
   </a>
 
   <ul class="off-canvas-menu">
@@ -34,8 +43,12 @@ Sass, that's the only sane way for me to do it.
     <!-- pushed away when the menu opens -->
 
     <div class="off-canvas-overlay-container">
-      <!-- where the overlay will be appended -->
+      <!-- where the overlay will be appended  -->
+      <!-- if omitted, the .off-canvas-content element will be used -->
     </div>
   </div>
 </body>
 ```
+
+[eventie]: https://github.com/desandro/eventie
+[classie]: https://github.com/desandro/classie

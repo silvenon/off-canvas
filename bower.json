@@ -5,8 +5,8 @@
   ],
   "description": "Provides an off-canvas menu",
   "main": [
-    "src/styles/off-canvas.scss",
-    "dist/off-canvas.js"
+    "styles/off-canvas.scss",
+    "scripts/off-canvas.js"
   ],
   "moduleType": [
     "globals"
@@ -29,5 +29,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "classie": "~1.0.1",
+    "eventie": "~1.0.5",
+    "lodash": "~2.4.1"
+  }
 }
