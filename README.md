@@ -43,8 +43,8 @@ installing Off-Canvas via Bower, download those as well.
     <!-- pushed away when the menu opens -->
 
     <div class="off-canvas-overlay-container">
-      <!-- where the overlay will be appended  -->
-      <!-- if omitted, the .off-canvas-content element will be used -->
+      <!-- where the overlay will be appended (optional) -->
+      <!-- if omitted, .off-canvas-content will be used -->
     </div>
   </div>
 </body>
