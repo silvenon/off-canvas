@@ -9,7 +9,7 @@
     $breakpoint: nth($off-canvas-breakpoint, 2);
 
     @if $direction == to {
-      @media (min-width: ($breakpoint + 1px)) { @content; }
+      @media (min-width: ($breakpoint)) { @content; }
     }
     @else if $direction == from {
       @media (max-width: ($breakpoint - 1px)) { @content; }
