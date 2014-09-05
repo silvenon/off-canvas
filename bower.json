@@ -22,7 +22,7 @@
     "sidebar"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/unity-hr/off-canvas",
+  "homepage": "https://github.com/silvenon/off-canvas",
   "ignore": [
     "**/.*",
     "node_modules",
