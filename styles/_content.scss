@@ -5,7 +5,6 @@
 @if ($off-canvas-style == normal) {
   &-content {
     @include off-canvas-init;
-    transform: translate3d(0,0,0);
   }
 
   &.is-active &-content {
