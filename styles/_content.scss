@@ -1,13 +1,18 @@
 &-content {
-  @include off-canvas-init;
   position: relative;
-  transform: translate3d(0,0,0);
 }
 
-&.is-active &-content {
-  transform: $off-canvas-content-transform;
-
-  @include off-canvas-breakpoint {
+@if ($off-canvas-style == normal) {
+  &-content {
+    @include off-canvas-init;
     transform: translate3d(0,0,0);
+  }
+
+  &.is-active &-content {
+    transform: $off-canvas-content-transform;
+
+    @include off-canvas-breakpoint {
+      transform: translate3d(0,0,0);
+    }
   }
 }

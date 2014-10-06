@@ -8,6 +8,10 @@
   width: $off-canvas-width;
   height: $off-canvas-height;
 
+  @if ($off-canvas-style == normal) {
+    z-index: $off-canvas-zindex;
+  }
+
   #{opposite($off-canvas-position)}: auto;
 
   transform: $off-canvas-menu-transform;
