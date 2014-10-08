@@ -1,18 +1,22 @@
 # Off-Canvas
 
-## Work in progress!
+## Work in Progress!
 
-This is a Sassy JavaScript library for off-canvas content. Install it with
+This is a [Sass][sass]y JavaScript library for off-canvas content. Install it with
 Bower:
 
 ```sh
 $ bower install --save off-canvas
 ```
 
-It depends on [Eventie][eventie] and [Classie][classie], so if you're not
-installing Off-Canvas via Bower, download those as well.
+It depends on [Eventie][eventie], [Classie][classie] and [Lo-Dash][lodash], so if
+you're not installing Off-Canvas via Bower, download those as well.
 
-## Example
+## Markup
+
+Required and optional classes you should use. The `off-canvas` namespace can be
+changed by editing the `$off-canvas-namespace` Sass variable and passing that
+same value as an option when initializing Off-Canvas.
 
 ```html
 <body class="off-canvas">
@@ -50,5 +54,73 @@ installing Off-Canvas via Bower, download those as well.
 </body>
 ```
 
+## Styles
+
+The default configuration:
+
+```scss
+// prefix of your classes, for example .off-canvas-menu
+$off-canvas-namespace:            "off-canvas" !default;
+
+// display style of the menu, more styles coming soon...
+$off-canvas-style:                normal !default;
+
+// z-index of the menu, sometimes necessary
+$off-canvas-zindex:               100 !default;
+
+// position of the menu
+$off-canvas-position:             top !default;
+
+// width of the menu, if the position is
+// top or bottom, leave this at auto
+$off-canvas-width:                auto !default;
+
+// height of the menu, if the position is
+// left or right, leave this at auto
+$off-canvas-height:               auto !default;
+
+// animation duration of opening the menu
+$off-canvas-transition-duration:  .2s !default;
+
+// at which point the menu activates or deactivates
+$off-canvas-breakpoint:           to 480px !default;
+
+// whether an overlay will appear,
+// which the user can click to close the menu
+$off-canvas-overlay:              true !default;
+```
+
+## Initialization
+
+When you're done configuring:
+
+```js
+var offCanvas = new OffCanvas({
+  // sets the namespace of the classes
+  // (optional, defaults to 'off-canvas')
+  namespace: 'off-canvas',
+
+  // callback when the menu opens
+  // (optional)
+  onOpen: function() { /* ... */ },
+
+  // callback when the menu closes
+  // (optional)
+  onClose: function() { /* ... */ }
+});
+
+// closes the menu if it's open
+// opens it if it's closed
+offCanvas.toggle();
+
+// opens the menu
+offCanvas.open();
+
+// closes the menu
+offCanvas.close();
+```
+
+[sass]:    http://sass-lang.com
 [eventie]: https://github.com/desandro/eventie
 [classie]: https://github.com/desandro/classie
+[lodash]:  https://github.com/lodash/lodash
