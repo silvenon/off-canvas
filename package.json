@@ -2,6 +2,9 @@
   "name": "off-canvas",
   "description": "Provides an off-canvas menu",
   "main": "gulpfile.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/unity-hr/off-canvas"
@@ -22,5 +25,14 @@
     "url": "https://github.com/unity-hr/off-canvas/issues"
   },
   "homepage": "https://github.com/unity-hr/off-canvas",
-  "devDependencies": {}
+  "devDependencies": {
+    "autoprefixer-core": "^3.0.1",
+    "gulp": "^3.8.8",
+    "gulp-load-plugins": "^0.6.0",
+    "gulp-plumber": "^0.6.5",
+    "gulp-postcss": "^1.0.2",
+    "gulp-ruby-sass": "^0.7.1",
+    "karma": "^0.12.23",
+    "wiredep": "^1.8.5"
+  }
 }
