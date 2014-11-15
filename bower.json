@@ -31,8 +31,6 @@
     "tests"
   ],
   "dependencies": {
-    "classie": "~1.0.1",
-    "eventie": "~1.0.5",
     "lodash": "~2.4.1"
   }
 }

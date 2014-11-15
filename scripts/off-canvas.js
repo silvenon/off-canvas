@@ -7,8 +7,8 @@ window.OffCanvas = function(options) {
   this.content = document.querySelector(ns + '-content');
   this.overlay = document.createElement('div');
 
-  classie.add(this.overlay, ns.substr(1) + '-overlay');
-  eventie.bind(this.overlay, 'click', function() { self.close(); });
+  this.overlay.classList.add(ns.substr(1) + '-overlay');
+  this.overlay.addEventListener('click', function() { self.close(); });
 
   this.overlayContainer = document.querySelector(ns + '-overlay-container');
 
@@ -19,7 +19,7 @@ window.OffCanvas = function(options) {
   this.toggleBtn = document.querySelectorAll(ns + '-toggle');
 
   for (var i = 0; i < this.toggleBtn.length; i++) {
-    eventie.bind(this.toggleBtn[i], 'click', function(event) {
+    this.toggleBtn[i].addEventListener('click', function(event) {
       event.preventDefault();
       self.toggle(event);
     });
@@ -31,7 +31,7 @@ window.OffCanvas = function(options) {
 
 OffCanvas.prototype.toggle = function(event) {
   // if it's already active
-  if (classie.has(this.container, 'is-active')) {
+  if (this.container.classList.contains('is-active')) {
     this.close();
     return;
   }
@@ -49,7 +49,7 @@ OffCanvas.prototype.toggle = function(event) {
 }
 
 OffCanvas.prototype.open = function(event) {
-  classie.add(this.container, 'is-active');
+  this.container.classList.add('is-active');
   this.overlay.style.display = '';
   this.onOpen(event);
 };
