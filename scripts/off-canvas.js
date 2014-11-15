@@ -55,7 +55,7 @@ OffCanvas.prototype.open = function(event) {
 };
 
 OffCanvas.prototype.close = function() {
-  classie.remove(this.container, 'is-active');
+  this.container.classList.remove('is-active');
   this.overlay.style.display = 'none';
   this.overlayContainer.removeChild(this.overlay);
   this.onClose();

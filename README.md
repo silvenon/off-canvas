@@ -9,8 +9,8 @@ Bower:
 $ bower install --save off-canvas
 ```
 
-It depends on [Eventie][eventie], [Classie][classie] and [Lo-Dash][lodash], so if
-you're not installing Off-Canvas via Bower, download those as well.
+It depends on [Lo-Dash][lodash], so if you're not installing Off-Canvas via
+Bower, download that as well.
 
 ## Markup
 
