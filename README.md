@@ -1,6 +1,8 @@
 # Off-Canvas
 
-## Work in Progress!
+**This is not being maintained anymore**. My plan was to make an ultimate off-canvas menu plugin, but then I found [Polymer/core-drawer-panel](https://github.com/Polymer/core-drawer-panel), which has most of what I want. Maybe at some point I'll make a fork of it.
+
+---
 
 This is a [Sass][sass]y JavaScript library for off-canvas content. Install it with
 Bower:
