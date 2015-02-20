@@ -9,41 +9,41 @@ $ bower install --save off-canvas
 
 ## Markup
 
-Required and optional classes you should use. The `off-canvas` namespace can be
+Required and optional classes you should use. The `oc` namespace can be
 changed by editing the `$off-canvas-namespace` Sass variable and passing that
 same value as an option when initializing Off-Canvas.
 
 ```html
-<body class="off-canvas">
-  <a class="off-canvas-toggle" href="#">
+<body class="oc">
+  <a class="oc-toggle" href="#">
     <!-- toggles the off-canvas menu -->
     <!-- you can have multiple of these -->
     <!-- for example a close button in the off-canvas menu -->
   </a>
 
-  <ul class="off-canvas-menu">
+  <ul class="oc-menu">
     <!-- mobile navigation or what have you -->
   </ul>
 
-  <div class="off-canvas-fixed">
-    <!-- a fixed element which should stay outside .off-canvas-content -->
+  <div class="oc-fixed">
+    <!-- a fixed element which should stay outside .oc-content -->
     <!-- usually the good ol' desktop navigation -->
   </div>
 
-  <div class="off-canvas-visible">
+  <div class="oc-visible">
     <!-- visible until the breakpoint -->
   </div>
 
-  <div class="off-canvas-hidden">
+  <div class="oc-hidden">
     <!-- hidden until the breakpoint -->
   </div>
 
-  <div class="off-canvas-content">
+  <div class="oc-content">
     <!-- pushed away when the menu opens -->
 
-    <div class="off-canvas-overlay-container">
+    <div class="oc-overlay-container">
       <!-- where the overlay will be appended (optional) -->
-      <!-- if omitted, .off-canvas-content will be used -->
+      <!-- if omitted, .oc-content will be used -->
     </div>
   </div>
 </body>
@@ -54,35 +54,35 @@ same value as an option when initializing Off-Canvas.
 The default configuration:
 
 ```scss
-// prefix of your classes, for example .off-canvas-menu
-$off-canvas-namespace:            "off-canvas" !default;
+// prefix of your classes, for example .oc-menu
+$oc-namespace:            "oc" !default;
 
 // display style of the menu, more styles coming soon...
-$off-canvas-style:                normal !default;
+$oc-style:                normal !default;
 
 // z-index of the menu, sometimes necessary
-$off-canvas-zindex:               100 !default;
+$oc-zindex:               100 !default;
 
 // position of the menu
-$off-canvas-position:             top !default;
+$oc-position:             top !default;
 
 // width of the menu, if the position is
 // top or bottom, leave this at auto
-$off-canvas-width:                auto !default;
+$oc-width:                auto !default;
 
 // height of the menu, if the position is
 // left or right, leave this at auto
-$off-canvas-height:               auto !default;
+$oc-height:               auto !default;
 
 // animation duration of opening the menu
-$off-canvas-transition-duration:  .2s !default;
+$oc-transition-duration:  .2s !default;
 
 // at which point the menu activates or deactivates
-$off-canvas-breakpoint:           to 480px !default;
+$oc-breakpoint:           to 480px !default;
 
 // whether an overlay will appear,
 // which the user can click to close the menu
-$off-canvas-overlay:              true !default;
+$oc-overlay:              true !default;
 ```
 
 ## Initialization
@@ -92,8 +92,8 @@ When you're done configuring:
 ```js
 var offCanvas = new OffCanvas({
   // sets the namespace of the classes
-  // (optional, defaults to 'off-canvas')
-  namespace: 'off-canvas',
+  // (optional, defaults to 'oc')
+  namespace: 'oc',
 
   // callback when the menu opens
   // (optional)

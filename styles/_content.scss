@@ -2,15 +2,15 @@
   position: relative;
 }
 
-@if ($off-canvas-style == normal) {
+@if ($oc-style == normal) {
   &-content {
-    @include off-canvas-init;
+    @include oc-init;
   }
 
-  &.is-active &-content {
-    transform: $off-canvas-content-transform;
+  .oc-active &-content {
+    transform: $oc-content-transform;
 
-    @include off-canvas-breakpoint {
+    @include oc-breakpoint {
       transform: translate3d(0,0,0);
     }
   }

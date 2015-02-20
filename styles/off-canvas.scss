@@ -4,7 +4,7 @@
 
 @import "transform";
 
-.#{$off-canvas-namespace} {
+.#{$oc-namespace} {
   @import "content";
   @import "fixed";
   @import "menu";

@@ -1,9 +1,9 @@
 window.OffCanvas = function(options) {
   var self = this;
-      options = options || {},
-      ns = options.namespace || '.off-canvas';
+  var options = options || {};
+  var ns = options && options.namespace || '.oc';
 
-  this.container = document.querySelector(ns);
+  this.container = document.body;
   this.content = document.querySelector(ns + '-content');
   this.overlay = document.createElement('div');
 
@@ -31,7 +31,7 @@ window.OffCanvas = function(options) {
 
 OffCanvas.prototype.toggle = function(event) {
   // if it's already active
-  if (this.container.classList.contains('is-active')) {
+  if (this.container.classList.contains('oc-active')) {
     this.close();
     return;
   }
@@ -46,16 +46,16 @@ OffCanvas.prototype.toggle = function(event) {
   } else {
     this.open(event);
   }
-}
+};
 
 OffCanvas.prototype.open = function(event) {
-  this.container.classList.add('is-active');
+  this.container.classList.add('oc-active');
   this.overlay.style.display = '';
   this.onOpen(event);
 };
 
 OffCanvas.prototype.close = function() {
-  this.container.classList.remove('is-active');
+  this.container.classList.remove('oc-active');
   this.overlay.style.display = 'none';
   this.overlayContainer.removeChild(this.overlay);
   this.onClose();

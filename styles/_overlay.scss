@@ -6,11 +6,11 @@
   left: 0;
   z-index: 1000;
 
-  @if $off-canvas-overlay == false {
+  @if $oc-overlay == false {
     display: none;
   }
 
-  @include off-canvas-breakpoint {
+  @include oc-breakpoint {
     display: none;
   }
 }

@@ -1,7 +1,7 @@
 &-toggle {
   display: inline-block;
 
-  @include off-canvas-breakpoint {
+  @include oc-breakpoint {
     display: none;
   }
 }

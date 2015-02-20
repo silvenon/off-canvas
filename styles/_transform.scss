@@ -1,22 +1,22 @@
-$off-canvas-menu-transform:    translate3d(0,0,0);
-$off-canvas-content-transform: translate3d(0,0,0);
+$oc-menu-transform:    translate3d(0,0,0);
+$oc-content-transform: translate3d(0,0,0);
 
-@if $off-canvas-position == top {
-  $off-canvas-menu-transform:    translate3d(0, -#{$off-canvas-height}, 0) !global;
-  $off-canvas-content-transform: translate3d(0,  #{$off-canvas-height}, 0) !global;
+@if $oc-position == top {
+  $oc-menu-transform:    translate3d(0, -#{$oc-height}, 0) !global;
+  $oc-content-transform: translate3d(0,  #{$oc-height}, 0) !global;
 }
-@else if $off-canvas-position == right {
-  $off-canvas-menu-transform:    translate3d( #{$off-canvas-width}, 0, 0) !global;
-  $off-canvas-content-transform: translate3d(-#{$off-canvas-width}, 0, 0) !global;
+@else if $oc-position == right {
+  $oc-menu-transform:    translate3d( #{$oc-width}, 0, 0) !global;
+  $oc-content-transform: translate3d(-#{$oc-width}, 0, 0) !global;
 }
-@else if $off-canvas-position == bottom {
-  $off-canvas-menu-transform:    translate3d(0, #{$off-canvas-height}, 0) !global;
-  $off-canvas-content-transform: translate3d(0, -#{$off-canvas-height}, 0) !global;
+@else if $oc-position == bottom {
+  $oc-menu-transform:    translate3d(0, #{$oc-height}, 0) !global;
+  $oc-content-transform: translate3d(0, -#{$oc-height}, 0) !global;
 }
-@else if $off-canvas-position == left {
-  $off-canvas-menu-transform:    translate3d(-#{$off-canvas-width}, 0, 0) !global;
-  $off-canvas-content-transform: translate3d( #{$off-canvas-width}, 0, 0) !global;
+@else if $oc-position == left {
+  $oc-menu-transform:    translate3d(-#{$oc-width}, 0, 0) !global;
+  $oc-content-transform: translate3d( #{$oc-width}, 0, 0) !global;
 }
 @else {
-  @warn "#{$off-canvas-position} is not a valid position!";
+  @warn "#{$oc-position} is not a valid position!";
 }

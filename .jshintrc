@@ -1,0 +1,7 @@
+{
+  "browser": true,
+  "loopfunc": true,
+  "sub": true,
+  "undef": false,
+  "shadow": true
+}

@@ -1,12 +1,12 @@
-@mixin off-canvas-init {
+@mixin oc-init {
   backface-visibility: hidden;
-  transition: $off-canvas-transition-duration transform;
+  transition: $oc-transition-duration transform;
 }
 
-@mixin off-canvas-breakpoint {
-  @if $off-canvas-breakpoint {
-    $direction: nth($off-canvas-breakpoint, 1);
-    $breakpoint: nth($off-canvas-breakpoint, 2);
+@mixin oc-breakpoint {
+  @if $oc-breakpoint {
+    $direction: nth($oc-breakpoint, 1);
+    $breakpoint: nth($oc-breakpoint, 2);
 
     @if $direction == to {
       @media (min-width: ($breakpoint)) { @content; }

@@ -1,7 +1,7 @@
 &-visible {
   display: block;
 
-  @include off-canvas-breakpoint {
+  @include oc-breakpoint {
     display: none;
   }
 }
@@ -9,7 +9,7 @@
 &-hidden {
   display: none;
 
-  @include off-canvas-breakpoint {
+  @include oc-breakpoint {
     display: block;
   }
 }

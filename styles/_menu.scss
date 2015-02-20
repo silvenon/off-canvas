@@ -1,26 +1,26 @@
 &-menu {
-  @include off-canvas-init;
+  @include oc-init;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: $off-canvas-width;
-  height: $off-canvas-height;
+  width: $oc-width;
+  height: $oc-height;
 
-  @if ($off-canvas-style == normal) {
-    z-index: $off-canvas-zindex;
+  @if ($oc-style == normal) {
+    z-index: $oc-zindex;
   }
 
-  #{opposite($off-canvas-position)}: auto;
+  #{opposite($oc-position)}: auto;
 
-  transform: $off-canvas-menu-transform;
+  transform: $oc-menu-transform;
 
-  @include off-canvas-breakpoint {
+  @include oc-breakpoint {
     display: none;
   }
 }
 
-&.is-active &-menu {
+.oc-active &-menu {
   transform: translate3d(0,0,0);
 }
