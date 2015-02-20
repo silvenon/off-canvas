@@ -7,9 +7,6 @@ Bower:
 $ bower install --save off-canvas
 ```
 
-It depends on [Lo-Dash][lodash], so if you're not installing Off-Canvas via
-Bower, download that as well.
-
 ## Markup
 
 Required and optional classes you should use. The `off-canvas` namespace can be
