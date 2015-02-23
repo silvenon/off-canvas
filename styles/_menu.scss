@@ -17,7 +17,7 @@
   transform: $oc-menu-transform;
 
   @include oc-breakpoint {
-    display: none;
+    display: none !important;
   }
 }
 

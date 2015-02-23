@@ -2,6 +2,6 @@
   display: inline-block;
 
   @include oc-breakpoint {
-    display: none;
+    display: none !important;
   }
 }
