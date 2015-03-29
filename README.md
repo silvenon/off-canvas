@@ -1,3 +1,7 @@
+### Work In Progress
+
+This library is not ready yet, I'm using it as a playground to learn.
+
 # Off-Canvas
 
 This is a [Sass][sass]y JavaScript library for off-canvas content. Install it with
