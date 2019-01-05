@@ -1,4 +1,4 @@
-# Off-Canvas ![not maintained](https://img.shields.io/badge/maintained-no-red.svg?style=flat-square)
+# Off-Canvas ![not maintained](https://img.shields.io/badge/maintained-no-lightgrey.svg?style=flat-square)
 
 **Deprecated**: This project is no longer maintained.
 
