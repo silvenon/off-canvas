@@ -1,8 +1,8 @@
-### Work In Progress
+# Off-Canvas ![not maintained](https://img.shields.io/badge/maintained-no-red.svg?style=flat-square)
 
-This library is not ready yet, I'm using it as a playground to learn.
+**Deprecated**: This project is no longer maintained.
 
-# Off-Canvas
+---
 
 This is a [Sass][sass]y JavaScript library for off-canvas content. Install it with
 Bower:
